@@ -32,7 +32,9 @@ char get_value(deck_node_t *card)
 {
 	const char *values[] = {"Ace", "1", "2", "3", "4", "5", "6",
 				"7", "8", "9", "10", "Jack", "Queen"};
-	for (int i = 0; i < 13; i++)
+	int i;
+
+	for (i = 0; i < 13; i++)
 		if (!_strcmp(card->card->value, values[i]))
 			return (i);
 	return (13);
